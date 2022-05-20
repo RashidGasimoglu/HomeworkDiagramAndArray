@@ -1,0 +1,46 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Xahish olunur Sirali Array'iniz uchun Bashlanghic ededi daxil edesiniz: ");
+            int StartPointArray = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Xahish olunur Sirali Array'iniz uchun Bitish ededi daxil edesiniz: ");
+            int EndPointArray = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Xahish olunur Sirali Array'de iki eded arasi artim aralighinin ne qeder olmasin daxil edesiniz: ");
+            int IncreaseInterval = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Array'da index'ini axtarmaq istediyiniz ededi daxil edin: ");
+            int Wanted = int.Parse(Console.ReadLine());
+
+            int index = 0;
+            for (int i = StartPointArray; i <= EndPointArray; i = i + IncreaseInterval)
+            {
+                index++;
+            }
+
+            int[] SiraliArray = new int[index];
+            index = 0;
+            for (int i = StartPointArray; i <= EndPointArray; i = i + IncreaseInterval)
+            {
+                SiraliArray[index] = i;
+                index++;
+            }
+
+            for (int i = 0; i < SiraliArray.Length; i++)
+            {
+                if (SiraliArray[i]==Wanted)
+                {
+                    Console.WriteLine($"axtardigin {Wanted} ededi {i}-ci indexdedir");
+                }
+            }
+
+        }
+    }
+}
+
